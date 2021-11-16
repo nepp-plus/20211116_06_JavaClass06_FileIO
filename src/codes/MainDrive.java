@@ -31,6 +31,27 @@ public class MainDrive {
 		
 //		연습문제.  입력받은 내용을 파일에 추가로 저장. (밑줄로)
 		
+		File myFile = new File("mytest.txt");
+		
+		try {
+			FileWriter fw = new FileWriter(myFile, true);
+			
+			BufferedWriter bw = new BufferedWriter(fw);
+			
+			bw.append(content);
+			bw.newLine();
+			
+			bw.close();
+			fw.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
 	}
 	
 	static void readFile() {
