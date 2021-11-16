@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class MainDrive {
 	
@@ -15,7 +16,20 @@ public class MainDrive {
 		
 //		writeToFile();
 		
-		readFile();
+//		readFile();
+		
+		Scanner myScanner = new Scanner(System.in);
+		
+		System.out.print("파일에 저장할 문구 : ");
+		String inputStr = myScanner.nextLine();
+		
+		writeToFile(inputStr);
+		
+	}
+	
+	static void writeToFile(String content) {
+		
+//		연습문제.  입력받은 내용을 파일에 추가로 저장. (밑줄로)
 		
 	}
 	
